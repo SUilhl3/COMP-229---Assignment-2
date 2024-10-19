@@ -1,0 +1,25 @@
+{
+  "name": "assignement-2",
+  "version": "1.0.0",
+  "description": "Mern Fullstack application",
+  "main": "index.js",
+  "workspaces": [
+    "marketplace"
+  ],
+  "scripts": {
+    "start": "npm-run-all --parallel start:marketplace",
+    "start:marketplace": "npm --prefix marketplace run dev",
+    "build": "npm-run-all --parallel build:marketplace",
+    "build:marketplace": "npm --prefix marketplace run build"
+  },
+  "author": "Isabel Lorrelyn Lag-ang",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1",
+    "mongodb": "^6.9.0",
+    "mongoshell": "^1.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
